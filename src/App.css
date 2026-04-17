@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  color: #222;
+  margin: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.95) 0 45px, transparent 46px),
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.95) 0 35px, transparent 36px),
+    radial-gradient(circle at 25% 18%, rgba(255, 255, 255, 0.95) 0 45px, transparent 46px),
+
+    radial-gradient(circle at 68% 10%, rgba(255, 255, 255, 0.95) 0 50px, transparent 51px),
+    radial-gradient(circle at 75% 12%, rgba(255, 255, 255, 0.95) 0 38px, transparent 39px),
+    radial-gradient(circle at 82% 10%, rgba(255, 255, 255, 0.95) 0 50px, transparent 51px),
+
+    radial-gradient(circle at 50% 28%, rgba(255, 255, 255, 0.8) 0 30px, transparent 31px),
+    radial-gradient(circle at 55% 29%, rgba(255, 255, 255, 0.8) 0 24px, transparent 25px),
+    radial-gradient(circle at 60% 28%, rgba(255, 255, 255, 0.8) 0 30px, transparent 31px),
+
+    linear-gradient(to bottom, #7fd3ff 0%, #aee8ff 45%, #dff8ff 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.app {
+  max-width: 700px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 90, 150, 0.20);
+  overflow: hidden;
+}
+
+.header {
+ background: linear-gradient(135deg, #4aa3ff, #79d7ff);
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  border-bottom: 3px solid #ffffff;
+}
+
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.header p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.main {
+  padding: 30px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 2px solid #7cc7ff;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: #ffffff;
+  color: #333;
+}
+
+.task-form input:focus {
+  border-color: #4facfe;
+}
+
+.task-form button,
+.task-item button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-form button {
+  background: #4facfe;
+  color: white;
+  padding: 14px 20px;
+  font-weight: bold;
+}
+
+.task-form button:hover {
+  background: #2f8be6;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border-left: 6px solid #4facfe;
+}
+
+.task-item span {
+  font-size: 1rem;
+  word-break: break-word;
+  margin-right: 12px;
+}
+
+.task-item button {
+  background: #ff5c5c;
+  color: white;
+  padding: 10px 14px;
+}
+
+.task-item button:hover {
+  background: #e64545;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 20px 12px;
+  }
+
+  .task-form {
+    flex-direction: column;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
